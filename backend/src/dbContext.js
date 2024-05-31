@@ -56,7 +56,9 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 const {
     User,
-    Record
+    Record,
+    Application,
+    Application_type,
 } = sequelize.models;
 User.hasMany(Record, {
     foreignKey: 'userId',
@@ -64,6 +66,19 @@ User.hasMany(Record, {
     hooks: true,
 })
 Record.belongsTo(User, { foreignKey: 'userId' })
+Application_type.hasMany(Application, {
+    foreignKey: 'typeId',
+    onDelete: 'CASCADE',
+    hooks: true,
+});
+Application.belongsTo(Application_type, { foreignKey: 'typeId' });
+User.hasMany(Application, {
+    foreignKey: 'userId',
+    onDelete: 'CASCADE',
+    hooks: true,
+});
+Application.belongsTo(User, { foreignKey: 'userId' });
+
 module.exports = {
     ...sequelize.models,
     conn: sequelize,

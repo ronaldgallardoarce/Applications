@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 export const InformationAlert = ({ t, w, message }) => {
     return (
         <div
-            className={`w-[100%] sm:${w} md:${w} lg:${w} xl:${w} bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+            className={`w-[100%] sm:w-[500px] bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
         >
             <div className="flex-1 w-0 p-4">
                 <div className="flex">

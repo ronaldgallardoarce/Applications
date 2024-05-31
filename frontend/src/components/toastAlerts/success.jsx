@@ -4,7 +4,7 @@ export const SuccessAlert = ({ t, w, message }) => {
 
     return (
         <div
-            className={`w-[100%] sm:${w} bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+            className={`w-[100%] sm:w-[500px] bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
         >
             <div className="flex-1 w-0 px-4 py-5">
                 <div className="flex">
