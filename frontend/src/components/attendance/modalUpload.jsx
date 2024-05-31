@@ -68,11 +68,11 @@ const ModalUpload = ({
     }, [file])
     return (
         <>
-            <div className="fixed inset-0 overflow-hidden backdrop-blur-sm bg-cbaBlue/20 p-2 flex items-center justify-center">
+            <div className="fixed inset-0 overflow-hidden bg-slate-950/20 z-[1] p-2 flex items-center justify-center">
                 {/* backdrop modal */}
-                <div onClick={handleToogleModal} className="fixed inset-0 z-[1]"></div>
+                <div onClick={handleToogleModal} className="fixed inset-0 z-[2]"></div>
                 {/* modal container */}
-                <div className="relative w-[500px] h-[500px] bg-white rounded-2xl shadow-xl z-[2]">
+                <div className="relative w-[500px] h-[500px] bg-white rounded-2xl shadow-xl z-[3]">
                     <button
                         onClick={handleToogleModal}
                         className={`right-0 text-zinc-500 absolute m-3 transition ease-in-out duration-500 hover:scale-[1.2]`}

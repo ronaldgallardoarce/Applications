@@ -14,7 +14,8 @@ module.exports = (sequelize) => {
         },
         user: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true,  // Restricción UNIQUE
         },
         password: {
             type: DataTypes.STRING,
@@ -23,6 +24,14 @@ module.exports = (sequelize) => {
         fullName: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        supervisors: {
+            type: DataTypes.ARRAY(DataTypes.TEXT),
+            allowNull: true
+        },
+        role: {
+            type: DataTypes.STRING,
+            allowNull: true //esta para cambiar a false
         },
         state: {
             type: DataTypes.BOOLEAN,
